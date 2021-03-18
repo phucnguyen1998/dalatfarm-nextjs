@@ -1,0 +1,20 @@
+.nav-item > span {
+    padding: 15.5px 15px;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+}
+
+.color-button {
+    background-color: inherit;
+}
+
+.zIndex1k {
+    z-index: 1000 !important;
+}
+
+.nav-item > a.nav-link:hover {
+    color: #fff !important;
+}
