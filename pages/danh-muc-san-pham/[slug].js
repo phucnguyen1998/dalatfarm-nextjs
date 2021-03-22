@@ -14,7 +14,7 @@ export default function Index({ product, preview }) {
                         <section style={{ width: '100%' }}>
                             <div className="row">
                                 {/* Product */}
-                                {Products.length === 0 ?
+                                {Products && Products.length === 0 ?
                                     <div style={{ height: 500 }} className="bgimg mb-5">
                                         <div className="middle">
                                             <h1>Đang Cập Nhật</h1>
@@ -25,7 +25,7 @@ export default function Index({ product, preview }) {
                                         </div>
                                     </div>
                                     :
-                                    Products.map((item, index) => {
+                                    Products && Products.map((item, index) => {
                                         return (
                                             <div key={index.toString()} className="col-xs-6 col-xss-6 col-sm-4 col-md-4 col-lg-4">
                                                 <div className="product-box">
