@@ -10,7 +10,7 @@ function index(props) {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-xs-12 col-sm-6 col-lg-3">
-                                        <div className="footer-widget">
+                                        <div className="footer-widget active">
                                             <h3 className="hastog"><span>Liên hệ</span></h3>
                                             <ul className="list-menu list-showroom">
                                                 <li style={{ paddingLeft: 0 }}>
@@ -34,7 +34,7 @@ function index(props) {
                                         </div>
                                     </div>
                                     <div className="col-xs-12 col-sm-6 col-lg-3">
-                                        <div className="footer-widget">
+                                        <div className="footer-widget active">
                                             <h3 className="hastog"><span>Danh mục</span></h3>
                                             <ul className="list-menu list-blogs">
                                                 <li><a title="Trang chủ" href="/">Trang chủ</a></li>
@@ -48,16 +48,21 @@ function index(props) {
                                         </div>
                                     </div>
                                     <div className="col-xs-12 col-sm-6 col-lg-3">
-                                        <div className="footer-widget">
+                                        <div className="footer-widget active">
                                             <h3 className="hastog"><span>Hỗ trợ khách hàng</span></h3>
                                             <ul className="list-menu list-blogs">
-
+                                                <li><a title="Trang chủ" href="/">Chính sách</a></li>
+                                                <li><a title="Sản phẩm" href="/tat-ca-san-pham">Sản phẩm</a></li>
+                                                <li><a title="Giới thiệu" href="/gioi-thieu">Phân phối</a></li>
+                                                <li><a title="Liên hệ" href="/lien-he">Đặt hàng</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="col-xs-12 col-sm-6 col-lg-3">
-                                        <div className="footer-widget">
+                                        <div className="footer-widget active">
                                             <h3 className="hastog"><span>Kết nối với DalatFarm</span></h3>
+                                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyuthfarm%2F&tabs=timeline&width=600&height=120&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=750969118667204" width={600} height={120} style={{ border: 'none', overflow: 'hidden' }} scrolling="no" frameBorder={0} allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
 
                                         </div>
                                     </div>

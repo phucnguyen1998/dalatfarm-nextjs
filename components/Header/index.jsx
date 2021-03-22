@@ -1,8 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import { StyledOffCanvas, Menu, Overlay } from 'styled-off-canvas'
+import { getAllCategoriesName } from './../../lib/graphcms'
 
 function Header(props) {
+    const router = useRouter()
+
     const [isOpen, setIsOpen] = useState(false)
+    const [categoriesName, setCategoriesName] = useState([])
+    const [showDropdown, setShowDropdown] = useState(false)
+
+    async function getCategoriesName() {
+        const categoriesName = (await getAllCategoriesName())
+        setCategoriesName(categoriesName)
+    }
+
+    useEffect(() => {
+        getCategoriesName()
+    }, [])
     return (
         <>
             <header className="header other-page">
@@ -41,12 +56,12 @@ function Header(props) {
                 </div>
 
                 <div className="container">
-                    <div className="header-content clearfix a-center">
+                    <div className="header-content clearfix a-center p-1">
                         <div className="row">
-                            <div className="col-xs-12 col-md-3 text-lg-left">
+                            <div className="col-xs-12 col-md-3 text-lg-left pt-4">
                                 <div className="logo inline-block">
                                     <a href="#" className="logo-wrapper ">
-                                        <img src="https://bizweb.dktcdn.net/100/308/325/themes/801947/assets/logo.png?1608116116274" alt="logo " />
+                                        {router.asPath !== "/" ? <img src="../logo-DlatFarm.png" alt="logo " /> : <img src="./logo-DlatFarm.png" alt="logo " />}
                                     </a>
                                 </div>
                             </div>
@@ -75,13 +90,42 @@ function Header(props) {
                         position='left'
                     >
                         <Menu className="zIndex1k">
+                            <div className="head-menu clearfix">
+                                <ul className="list-inline">
+                                    <li className="li-search">
+                                        <div className="header_search search_form">
+                                            <a href="#" className="logo-wrapper ">
+                                                {router.asPath !== "/" ? <img src="../logo-DlatFarm.png" alt="logo " /> : <img src="./logo-DlatFarm.png" alt="logo " />}
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div className="menuclose" onClick={() => { setIsOpen(false) }}><i className="fa fa-times" /></div>
+                            </div>
+
                             <ul id="nav-mobile" className="nav hidden-md hidden-lg open">
-                                <li className="h3">MENU</li>
+                                <li className="h3">
+                                    MENU
+                                </li>
                                 <li className="nav-item active"><a className="nav-link" href="/">Trang chủ</a></li>
+                                <li className="nav-item">
+                                    <a onClick={() => { setShowDropdown(!showDropdown) }} className="nav-link">Sản phẩm <i className="fa faa fa-angle-right" /></a>
+                                </li>
+                                {showDropdown && <li style={{ float: 'none' }} className="dropdown-menu ml-4">
+                                    {
+                                        categoriesName && categoriesName.map((item, index) => {
+                                            return (
+                                                <li key={index.toString()} className="dropdown-submenu nav-item-lv2">
+                                                    <a className="nav-link pl-5" href={`/danh-muc-san-pham/${item.slug}`}> {item.categoryName}</a>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </li>}
                                 <li className="nav-item "><a className="nav-link" href="/gioi-thieu">Giới thiệu</a></li>
-                                <li className="nav-item "><a className="nav-link" href="/tat-ca-san-pham">Sản Phẩm</a></li>
-                                <li className="nav-item "><a className="nav-link" href="/lien-he">Liên Hệ</a></li>
+                                <li className="nav-item "><a className="nav-link" href="/lien-he">Liên hệ</a></li>
                             </ul>
+
                         </Menu>
                         <Overlay />
                     </StyledOffCanvas>
@@ -92,9 +136,23 @@ function Header(props) {
                     <div className="container">
                         <div className="hidden-sm hidden-xs">
                             <ul className="nav nav-left">
-                                <li className="nav-item "><a title="Trang chủ" className="nav-link" href="/">Trang chủ</a></li>
+                                <li className="nav-item "><a title="Trang chủ" className="nav-link pl-0" href="/">Trang chủ</a></li>
                                 <li className="nav-item "><a title="Giới Thiệu" className="nav-link" href="/gioi-thieu">Giới Thiệu</a></li>
-                                <li className="nav-item "><a title="Sản Phẩm" className="nav-link" href="/tat-ca-san-pham">Sản Phẩm</a></li>
+                                <li className="nav-item ">
+                                    <a title="Tin tức" href="/tat-ca-san-pham" className="nav-link">Sản Phẩm <i className="fa fa-angle-right" data-toggle="dropdown" /></a>
+                                    <ul className="dropdown-menu">
+                                        {
+                                            categoriesName && categoriesName.map((item, index) => {
+                                                return (
+                                                    <li key={index.toString()} className="nav-item-lv2">
+                                                        <a className="nav-link" href={`/danh-muc-san-pham/${item.slug}`}>{item.categoryName}</a>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </li>
+
                                 <li className="nav-item "><a title="Liên hệ" className="nav-link" href="/lien-he">Liên hệ</a></li>
                             </ul>
                         </div>

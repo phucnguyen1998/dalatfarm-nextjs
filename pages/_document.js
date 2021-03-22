@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
           <link href="/bizweb.dktcdn.net/100/308/325/themes/801947/assets/responsive-update.scss7a0e.css?1608116116274" rel="stylesheet" type="text/css" />
           <link rel="stylesheet" href="/use.fontawesome.com/releases/v5.7.2/css/all.css" media="all" />
 
+          <link href="/styleCommingSoonPage.css" rel="stylesheet" type="text/css" />
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous"></link>
         </Head>
         <body>

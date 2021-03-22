@@ -18,3 +18,15 @@
 .nav-item > a.nav-link:hover {
     color: #fff !important;
 }
+
+#nav-mobile button {
+    color: #80bb35;
+    border-color: #80bb35;
+    line-height: 30px;
+}
+
+.nav > li > button {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}

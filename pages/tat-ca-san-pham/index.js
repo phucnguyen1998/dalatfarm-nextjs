@@ -20,8 +20,9 @@ function Index({ preview }) {
         <>
             <Layout preview={preview}>
                 <Container>
+                    <h1 style={{ fontSize: 40, fontWeight: 'bold', color: '#80ba35' }} className="mt-5 text-center">Tất cả sản phẩm</h1>
                     <div className="d-flex pt-5">
-                        <section className="">
+                        <section style={{ width: '100%' }}>
                             <div className="row">
                                 {/* Product */}
                                 {Allprorduct && Allprorduct.map((item, index) => {

@@ -55,17 +55,17 @@ function Product(props) {
                                             </div>
                                             <div className="social-sharing">
                                                 <div className="social-media" data-permalink="cherry-do-canada-loai-to.html">
-                                                    <label>Chia sẻ: </label>
-                                                    <a href="#" className="share-facebook" title="Chia sẻ lên Facebook">
+                                                    <label className="mr-3">Chia sẻ: </label>
+                                                    <a href="#" className="share-facebook mr-2" title="Chia sẻ lên Facebook">
                                                         <i className="fab fa-facebook" />
                                                     </a>
-                                                    <a href="#" className="share-twitter" title="Chia sẻ lên Twitter">
+                                                    <a href="#" className="share-twitter mr-2" title="Chia sẻ lên Twitter">
                                                         <i className="fab fa-twitter" />
                                                     </a>
-                                                    <a href="#" className="share-pinterest" title="Chia sẻ lên pinterest">
+                                                    <a href="#" className="share-pinterest mr-2" title="Chia sẻ lên pinterest">
                                                         <i className="fab fa-pinterest" />
                                                     </a>
-                                                    <a href="#" className="share-google">
+                                                    <a href="#" className="share-google mr-2">
                                                         <i className="fab fa-google-plus" />
                                                     </a>
                                                 </div>
