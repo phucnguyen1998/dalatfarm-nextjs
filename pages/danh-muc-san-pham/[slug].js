@@ -7,7 +7,7 @@ export default function DanhMuc(props) {
     const { product } = props
     return (
         <>
-            <Layout>
+            {product && <Layout>
                 <Container>
                     <h1 style={{ fontSize: 40, fontWeight: 'bold', color: '#80ba35' }} className="mt-5 text-center">{product && product.categoryName}</h1>
                     <div className="d-flex pt-5">
@@ -53,7 +53,7 @@ export default function DanhMuc(props) {
                         </section>
                     </div>
                 </Container>
-            </Layout>
+            </Layout>}
         </>
     )
 }
