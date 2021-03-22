@@ -20,7 +20,7 @@ function Product(props) {
                                     <div className="col-xs-12 col-sm-12 col-md-5">
                                         <div className="large-image">
                                             <a href="#">
-                                                <img id="zoom_01" src={product.image.url} alt={product.product_name} />
+                                                <img id="zoom_01" src={product && product.image.url} alt={product.product_name} />
                                             </a>
                                         </div>
                                     </div>

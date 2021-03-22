@@ -3,18 +3,18 @@ import Container from '../../components/container';
 import Layout from '../../components/layout';
 import { getAllCategoriesWithSlug, getProductByCategories } from '../../lib/graphcms';
 
-export default function Index({ product, preview }) {
-    const Products = product.products
+export default function DanhMuc(props) {
+    const { product } = props
     return (
         <>
-            <Layout preview={preview}>
+            <Layout>
                 <Container>
-                    <h1 style={{ fontSize: 40, fontWeight: 'bold', color: '#80ba35' }} className="mt-5 text-center">{product.categoryName}</h1>
+                    <h1 style={{ fontSize: 40, fontWeight: 'bold', color: '#80ba35' }} className="mt-5 text-center">{product && product.categoryName}</h1>
                     <div className="d-flex pt-5">
                         <section style={{ width: '100%' }}>
                             <div className="row">
                                 {/* Product */}
-                                {Products && Products.length === 0 ?
+                                {product.products && product.products.length === 0 ?
                                     <div style={{ height: 500 }} className="bgimg mb-5">
                                         <div className="middle">
                                             <h1>Đang Cập Nhật</h1>
@@ -25,7 +25,7 @@ export default function Index({ product, preview }) {
                                         </div>
                                     </div>
                                     :
-                                    Products && Products.map((item, index) => {
+                                    product.products && product.products.map((item, index) => {
                                         return (
                                             <div key={index.toString()} className="col-xs-6 col-xss-6 col-sm-4 col-md-4 col-lg-4">
                                                 <div className="product-box">
