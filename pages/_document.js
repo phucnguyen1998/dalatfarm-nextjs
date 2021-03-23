@@ -10,8 +10,6 @@ export default class MyDocument extends Document {
           <link href="../assets/paira-typography.css" rel="stylesheet" />
           <link href="../assets/paira-responsive.css" rel="stylesheet" />
           <link href="../assets/font-awesome.min.css" rel="stylesheet" />
-          <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400" />
-          <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:700" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
           <link href="/styleCommingSoonPage.css" rel="stylesheet" type="text/css" />
