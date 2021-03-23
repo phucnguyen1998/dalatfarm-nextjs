@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
 import { StyledOffCanvas, Menu, Overlay } from 'styled-off-canvas'
 import { getAllCategoriesName } from './../../lib/graphcms'
 
@@ -38,14 +37,18 @@ function Header(props) {
                             <div className="col-md-12 col-sm-12 col-xs-12 text-center">
                                 {/*=================== Main Menu ===================*/}
                                 <nav className="navbar navbar-default paira-mega-menu mega-menu">
-                                    <div className="navbar-header">
+                                    <div className="navbar-header position-relative">
                                         <button type="button" className="navbar-toggle pull-right" onClick={() => { setIsOpen(true) }}>
                                             <span className="icon-bar" />
                                             <span className="icon-bar" />
                                             <span className="icon-bar" />
                                         </button>
                                     </div>
-
+                                    <div className="pull-right flag">
+                                        <img className="mr-1" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.6.0/flags/4x3/us.svg" alt="" style={{ width: 15 }} />
+                                        <img className="mr-1" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.6.0/flags/4x3/kr.svg" alt="" style={{ width: 15 }} />
+                                        <img className="mr-1" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.6.0/flags/4x3/vn.svg" alt="" style={{ width: 15 }} />
+                                    </div>
                                     <StyledOffCanvas
                                         isOpen={isOpen}
                                         onClose={() => setIsOpen(false)}

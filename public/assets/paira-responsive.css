@@ -7,6 +7,13 @@
  * Author -> ThemeTidy.com
  * Email -> admin@themetidy.com
  */
+
+@media (min-width: 1199px) {
+    .flag {
+        display: none;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .single-product-image-list .owl-carousel .owl-item {
         margin-right: 0;
@@ -37,6 +44,9 @@
     #main-bx-pager {
         top: 20%;
         max-width: 150px;
+    }
+    .flag {
+        display: none;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -96,8 +106,14 @@
     .banner-big-main {
         height: 500px;
     }
+    .flag {
+        display: none;
+    }
 }
 @media only screen and (max-width: 767px) {
+    .flag {
+        display: block;
+    }
     .navbar-form {
         position: relative;
     }
