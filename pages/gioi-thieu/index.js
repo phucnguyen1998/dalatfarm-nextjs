@@ -19,13 +19,26 @@ function Index({ preview }) {
         <>
             <Layout preview={preview}>
                 <Container>
-                    <div className="mt-5 mb-5">
-                        <h1 className="text-center mb-5" style={{ fontSize: 36 }}>{About && About.title}</h1>
-                        <h4 className="mt-2 mb-4" style={{ fontSize: 18 }}>{About && About.slogan[0]}</h4>
-                        <ReactMarkdown
-                            children={About && About.content}
-                        />
+                    <div>
+                        {/*=================== About Template ===================*/}
+                        <main className="about-page">
+                            <section className="about-content paira-gap-1 paira-gap-2">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-md-12 text-center">
+                                            <h1 className="page-header margin-bottom-40">Về chúng tôi</h1>
+                                        </div>
+                                        <div className="col-md-12">
+                                            <ReactMarkdown
+                                                children={About && About.content}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </main>
                     </div>
+
                 </Container>
             </Layout>
         </>

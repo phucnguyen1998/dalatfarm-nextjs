@@ -15,42 +15,46 @@ function Index({ preview }) {
     useEffect(() => {
         getAllProduct()
     }, [])
-
+    console.log(Allprorduct);
     return (
         <>
             <Layout preview={preview}>
                 <Container>
-                    <h1 style={{ fontSize: 40, fontWeight: 'bold', color: '#80ba35' }} className="mt-5 text-center">Tất cả sản phẩm</h1>
-                    <div className="d-flex pt-5">
-                        <section style={{ width: '100%' }}>
-                            <div className="row">
-                                {/* Product */}
-                                {Allprorduct && Allprorduct.map((item, index) => {
-                                    return (
-                                        <div key={index.toString()} className="col-xs-6 col-xss-6 col-sm-4 col-md-4 col-lg-4">
-                                            <div className="product-box">
-                                                <div className="product-thumbnail flexbox-grid">
-                                                    <a href={`san-pham/${item.slug}`} title={item.product_name}>
-                                                        <img className="lazyload loaded" src={item.image.url} alt={item.product_name} data-ll-status="loaded" />
-                                                    </a>
-                                                </div>
-                                                <div className="product-info a-center">
-                                                    <h3 className="product-name"><a href={`/san-pham/${item.slug}`} title={item.product_name}>{item.product_name}</a></h3>
-                                                    <div className="price-box clearfix">
-                                                        <div className="special-price">
+                    <main className="collection-page">
+                        {/*=================== Collections Product Section ===================*/}
+                        <section className="collection-content paira-gap-2">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-md-12 col-sm-12 col-xs-12 paira-gap-1 text-center">
+                                        <div className="paira-collection-content">
+                                            <h1 className="page-header">Tất cả sản phẩm</h1>
+                                            <div className="row paira-grid-view">
+                                                {
+                                                    Allprorduct && Allprorduct.map((item, index) => {
+                                                        return (
+                                                            <div key={index.toString()} className="col-md-4 col-sm-4 col-xs-12 margin-top-30">
+                                                                {/*=================== Product ===================*/}
+                                                                <div className="paira-product product position-r">
+                                                                    <a href={`/${item.slug}`}>
+                                                                        <img src={item.image.url} alt={item.product_name} className="paira-product-image img-responsive" />
+                                                                    </a>
+                                                                    <div className="product-title-price full-width text-center bg-price">
+                                                                        <h4 className="display-inline-b margin-right-10"><span className="money">{item.product_name}</span></h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
 
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
-                                    )
-                                })
-                                }
-
+                                    </div>
+                                </div>
                             </div>
                         </section>
-                    </div>
+                    </main>
+
                 </Container>
             </Layout>
         </>
