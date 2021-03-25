@@ -8,7 +8,7 @@ function Product(props) {
     return (
         <>
             <Layout
-                title={`DlatFarm - ${product && product.product_name}`}
+                title={`DlatFarm - ${product && product.description}`}
             >
                 <div classname="paira-container">
                     {/*=================== Breadcrumb Section ===================*/}
