@@ -30,6 +30,8 @@ export default function Meta(props) {
         content={title ? title : 'DlatFarm - Gieo Tâm Sạch Trao Quả Lành'}
       />
 
+      <title>{title ? title : 'DlatFarm - Gieo Tâm Sạch Trao Quả Lành'}</title>
+
     </Head>
   )
 }
