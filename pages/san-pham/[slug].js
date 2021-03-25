@@ -7,7 +7,9 @@ function Product(props) {
     const { product } = props
     return (
         <>
-            <Layout>
+            <Layout
+                title={`DlatFarm - ${product && product.product_name}`}
+            >
                 <div classname="paira-container">
                     {/*=================== Breadcrumb Section ===================*/}
                     <section className="breadcrumb margin-top-30 text-center">

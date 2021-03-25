@@ -6,7 +6,9 @@ function Index({ preview }) {
 
     return (
         <>
-            <Layout preview={preview}>
+            <Layout preview={preview}
+                title={"Cảm ơn bạn đã chọn DlatFarm"}
+            >
                 <Container>
                     <main className="contact-page">
                         <section className="contact-content">

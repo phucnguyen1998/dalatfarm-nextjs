@@ -17,7 +17,10 @@ function Index({ preview }) {
 
     return (
         <>
-            <Layout preview={preview}>
+            <Layout
+                preview={preview}
+                title={"DlatFarm - Về chúng tôi"}
+            >
                 <Container>
                     <div>
                         {/*=================== About Template ===================*/}

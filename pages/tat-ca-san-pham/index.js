@@ -15,10 +15,13 @@ function Index({ preview }) {
     useEffect(() => {
         getAllProduct()
     }, [])
-    console.log(Allprorduct);
+
     return (
         <>
-            <Layout preview={preview}>
+            <Layout
+                preview={preview}
+                title={"DlatFarm - Tất cả sản phẩm"}
+            >
                 <Container>
                     <main className="collection-page">
                         {/*=================== Collections Product Section ===================*/}

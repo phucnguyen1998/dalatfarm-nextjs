@@ -7,7 +7,9 @@ export default function DanhMuc(props) {
     const { product } = props
     return (
         <>
-            {product && <Layout>
+            {product && <Layout
+                title={`DlatFarm - ${product && product.categoryName}`}
+            >
                 <Container>
 
                     <section className="collection-content paira-gap-2">

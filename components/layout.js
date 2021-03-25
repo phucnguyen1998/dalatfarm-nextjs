@@ -2,10 +2,10 @@ import Footer from './../components/Footer'
 import Header from './../components/Header'
 import Meta from '../components/meta'
 
-export default function Layout({ preview, children }) {
+export default function Layout({ preview, children, title }) {
   return (
     <>
-      <Meta />
+      <Meta title={title} />
       <Header />
       {/* <div className=""> */}
       <main>{children}</main>
