@@ -35,7 +35,7 @@ function Index({ preview }) {
                                                             <div key={index.toString()} className="col-md-4 col-sm-4 col-xs-12 margin-top-30">
                                                                 {/*=================== Product ===================*/}
                                                                 <div className="paira-product product position-r">
-                                                                    <a href={`/${item.slug}`}>
+                                                                    <a href={`/san-pham/${item.slug}`}>
                                                                         <img src={item.image.url} alt={item.product_name} className="paira-product-image img-responsive" />
                                                                     </a>
                                                                     <div className="product-title-price full-width text-center bg-price">

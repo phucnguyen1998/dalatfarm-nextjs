@@ -128,8 +128,9 @@ function Header(props) {
                                                 <a href="/gioi-thieu">Về Chúng Tôi</a>
                                             </li>
                                             <li className="">
-                                                <a href="blog.html">Sản Phẩm</a>
+                                                <a href="/tat-ca-san-pham">Sản Phẩm</a>
                                             </li>
+
                                             <li className="">
                                                 <a href="/lien-he">Liên Hệ</a>
                                             </li>
