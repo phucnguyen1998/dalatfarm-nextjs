@@ -25,10 +25,10 @@ export default function Meta(props) {
       <meta property="og:title" content={title ? title : 'DlatFarm - Gieo Tâm Sạch Trao Quả Lành'} />
       <meta property="og:image" content={image ? image : "/image.jpeg"} />
       <meta property="og:url" content="http://www.dlatfarm.vn" />
-      {/* <meta
+      <meta
         name="description"
         content={title ? title : 'DlatFarm - Gieo Tâm Sạch Trao Quả Lành'}
-      /> */}
+      />
 
     </Head>
   )
