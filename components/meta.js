@@ -22,6 +22,12 @@ export default function Meta(props) {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
+
+      <meta name="robots" content="noodp,index,follow" />
+      <meta name="revisit-after" content="1 days" />
+      <meta http-equiv="content-language" content="vi" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
       <meta property="og:title" content={title ? title : 'DlatFarm - Gieo Tâm Sạch Trao Quả Lành'} />
       <meta property="og:image" content={image ? image : "/image.jpeg"} />
       <meta property="og:url" content="http://www.dlatfarm.vn" />
