@@ -31,7 +31,7 @@ function Index({ preview }) {
                                     <div className="col-md-12 col-sm-12 col-xs-12 paira-gap-1 text-center">
                                         <div className="paira-collection-content">
                                             <h1 className="page-header">Tất cả sản phẩm</h1>
-                                            <div className="row paira-grid-view">
+                                            <div style={{ display: 'flex', flexWrap: 'wrap' }} className="row paira-grid-view">
                                                 {
                                                     Allprorduct && Allprorduct.map((item, index) => {
                                                         return (

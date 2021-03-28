@@ -25,7 +25,7 @@ function Header(props) {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 col-sm-12 col-xs-12 logo-text text-center">
-                                <img src="../assets/logo-DlatFarm.png" alt="" className="img-responsive center-block margin-bottom-20" />
+                                <img src="../assets/logo-DlatFarm.png" alt="" className="img-responsive center-block margin-bottom-20 logo-style" />
                             </div>
                         </div>
                     </div>
