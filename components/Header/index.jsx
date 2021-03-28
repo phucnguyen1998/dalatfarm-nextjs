@@ -127,8 +127,15 @@ function Header(props) {
                                             <li className="">
                                                 <a href="/gioi-thieu">Về Chúng Tôi</a>
                                             </li>
-                                            <li className="">
-                                                <a href="/tat-ca-san-pham">Sản Phẩm</a>
+                                            <li className="dropdown">
+                                                <a href="#">Sản Phẩm</a>
+                                                <div className="dropdown-content">
+                                                    {categoriesName && categoriesName.map((item, index) => {
+                                                        return (
+                                                            <p key={index.toString()} ><a href={`/danh-muc-san-pham/${item.slug}`}>{item.categoryName}</a></p>
+                                                        )
+                                                    })}
+                                                </div>
                                             </li>
 
                                             <li className="">
